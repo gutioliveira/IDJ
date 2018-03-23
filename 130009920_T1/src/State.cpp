@@ -7,20 +7,20 @@ State::State(){
 }
 
 bool State::QuitRequested(){
-	return QuitRequested;
+	return quitRequested;
 }
 
 void State::LoadAssets(){
 
-	background->open("res/img/ocean.jpg");
+	background->Open("res/img/ocean.jpg");
 }
 
 void State::Update(float delta){
 	if( SDL_QuitRequested() == SDL_TRUE ){
-		QuitRequested = true;
+		quitRequested = true;
 	}
 }
 
-void State::render(){
+void State::Render(){
 	background->Render(0, 0);
 }

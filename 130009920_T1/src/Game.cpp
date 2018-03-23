@@ -18,7 +18,7 @@ State & Game::GetState(){
 	return *state;
 }
 
-Game & Game::get_instance(){
+Game & Game::GetInstance(){
 	return *instance;
 }
 

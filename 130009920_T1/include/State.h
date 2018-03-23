@@ -1,6 +1,5 @@
 #include <SDL2/SDL.h>
 #include <iostream>
-#include "Sprite.h"
 
 class Sprite;
 
@@ -15,5 +14,5 @@ class State{
 
 	private:
 		Sprite * background;
-		bool QuitRequested = false;
-}
+		bool quitRequested = false;
+};

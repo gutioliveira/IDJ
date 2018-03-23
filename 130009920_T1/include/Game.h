@@ -6,10 +6,10 @@ class Game{
     public:
         // methods
         ~Game();
-        void run();
+        void Run();
         SDL_Renderer * GetRenderer();
         State & GetState();
-        static GetInstance() & Game;
+        static Game & GetInstance();
 
     private:
         // methods
@@ -20,4 +20,4 @@ class Game{
         SDL_Window * window;
         SDL_Renderer * renderer = nullptr;
         State * state;
-}
+};

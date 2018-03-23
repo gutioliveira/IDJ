@@ -2,6 +2,7 @@
 #include <iostream>
 
 class Sprite;
+class Music;
 
 class State{
 	public:
@@ -13,6 +14,7 @@ class State{
 		void Render();
 
 	private:
-		Sprite * background;
+		Sprite * bg;
+		Music * music;
 		bool quitRequested = false;
 };

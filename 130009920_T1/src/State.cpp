@@ -1,9 +1,11 @@
 #include "State.h"
 #include "Sprite.h"
+#include "Music.h"
 
 State::State(){
 
-	background = new Sprite();
+	bg = new Sprite();
+	music = new Music();
 }
 
 bool State::QuitRequested(){
@@ -12,7 +14,8 @@ bool State::QuitRequested(){
 
 void State::LoadAssets(){
 
-	background->Open("assets/img/ocean.jpg");
+	bg->Open("assets/img/ocean.jpg");
+	music->Open("assets/audio/stageState.ogg");
 }
 
 void State::Update(float delta){
@@ -22,5 +25,5 @@ void State::Update(float delta){
 }
 
 void State::Render(){
-	background->Render(0, 0);
+	bg->Render(0, 0);
 }

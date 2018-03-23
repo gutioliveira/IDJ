@@ -4,10 +4,9 @@ Music::Music(){
 	music = nullptr;
 }
 
-
-// Music::Music(string file){
-// 	Open(file);
-// }
+Music::Music(string file){
+	Open(file);
+}
 
 void Music::Play(int times){
 	Mix_PlayMusic(music, times);

@@ -50,6 +50,14 @@ Game::Game(string title, int width, int height) : state(new State()){
 		exit(-1);
 	}
 
+	int flagsMusic = MIX_INIT_OGG | MIX_INIT_MP3;
+
+	if ( flagsMusic != Mix_Init(flagsMusic) ){
+		
+		printf("%s\n", SDL_GetError());
+		exit(-1);	
+	}
+
 	window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, 
 		SDL_WINDOWPOS_CENTERED, width, height, 0);
 

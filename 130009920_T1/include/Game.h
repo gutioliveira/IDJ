@@ -1,6 +1,9 @@
-#include "SDL_include.h"
-
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
+#include <SDL2/SDL_mixer.h>
 #include <State.h>
+
+using std::string;
 
 class Game{
     public:
@@ -10,10 +13,9 @@ class Game{
         SDL_Renderer * GetRenderer();
         State & GetState();
         static Game & GetInstance();
+        Game(string title, int width, int height);
 
     private:
-        // methods
-        Game(string title, int width, int height);
 
         // attributes
         static Game * instance;

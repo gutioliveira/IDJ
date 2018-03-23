@@ -50,14 +50,18 @@ Game::Game(string title, int width, int height) : state(new State()){
 		exit(-1);
 	}
 
-	if ( SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, 
-		SDL_WINDOWPOS_CENTERED, width, height, 0) == nullptr ){
+	window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, 
+		SDL_WINDOWPOS_CENTERED, width, height, 0);
+
+	if ( window == nullptr ){
 
 		printf("%s\n", SDL_GetError());
 		exit(-1);
 	}
 
-	if ( SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED) == nullptr ){
+	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+	if ( renderer == nullptr ){
 
 		printf("%s\n", SDL_GetError());
 		exit(-1);

@@ -12,7 +12,7 @@ bool State::QuitRequested(){
 
 void State::LoadAssets(){
 
-	background->Open("res/img/ocean.jpg");
+	background->Open("assets/img/ocean.jpg");
 }
 
 void State::Update(float delta){
